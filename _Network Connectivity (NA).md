@@ -1503,10 +1503,10 @@ conf t
 ~~~
 !@R4
 conf t
- router ___  __
-  router-id __.__.__.__
-  network __.__.__.__  __.__.__.__ area __
-  network __.__.__.__  __.__.__.__ area __
+ router ospf 1
+  router-id 4.4.4.4
+  network 10.1.1.8 0.0.0.3 area 0
+  network 4.4.4.4 0.0.0.0 area 0
   end
 ~~~
 
@@ -2746,9 +2746,7 @@ conf t
 Configure NAT Overloading / PAT
 ~~~
 !@R1
-conf t
- ip nat inside source list 1 int e1/2 overload
- end
+s
 ~~~
 
 <br>
